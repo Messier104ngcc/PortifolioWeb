@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PortifolioWeb.styles.css" asp-append-version="true" />
 </head>
-<body>
-     <div class="containerbody">
-        <nav class="nav-link">
-            <div class="containertop">
-                <h1>Portfólio</h1>
-                <div id="">
-                    <ul>
-                        <li class="nav-link"><a href="#!">Home</a></li>
-                        <li class="nav-link"><a href="#!">Sobre</a></li>
-                        <li class="nav-link"><a href="#!">Contato</a></li>
-                        <li class="nav-link"><a href="#!">Projetos</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<body>   
         <!-- Header-->
-        <header class="bg-dark py-5">
+    <header class="containerbody">
+        <div>
+            <nav class="nav-link">
+                <div class="containertop">
+                    <h1>Portfólio</h1>
+                    <div class="hamburger" onclick="toggleMenu()">☰</div>
+                    <div id="">
+                        <ul class="menu">
+                            <li class="nav-link"><a href="#!">Home</a></li>
+                            <li class="nav-link"><a href="#!">Sobre</a></li>
+                            <li class="nav-link"><a href="#!">Contato</a></li>
+                            <li class="nav-link"><a href="#!">Projetos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
@@ -35,7 +36,8 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
         <!-- Features section-->
         <section class="py-5 border-bottom" id="features">
             <div class="container px-5 my-5">
@@ -334,10 +336,7 @@
     <footer id="footer">
         <h5>&copy; 2024 - Todos os direitos reservados.</h5>
     </footer>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    @RenderBody()
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

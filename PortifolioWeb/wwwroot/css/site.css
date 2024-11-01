@@ -8946,19 +8946,7 @@ textarea.form-control-lg {
     background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-dark {
-    --bs-bg-opacity: 1;
-    background-image: url('/img/foto atualizada.jpg'); /* Caminho para sua imagem */
-    background-size: cover; /* Faz a imagem cobrir todo o header */
-    background-position: center 5%;
-    padding-left: 10%;
-    height: 400px; /* Altura do header */
-    color: black; /* Cor do texto */
-    display: flex; /* Usando Flexbox para centralizar o texto */
-    align-items: center; /* Alinha verticalmente */
-    justify-content: center; /* Alinha horizontalmente */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para o texto */
-}
+
 
 .bg-black {
     --bs-bg-opacity: 1;
@@ -12416,6 +12404,20 @@ textarea.form-control-lg {
 
 /*Melhorias css a partir dessa linha.*/
 
+.containerbody {
+    --bs-bg-opacity: 1;
+    background-image: url('/img/foto atualizada.jpg'); /* Caminho para sua imagem */
+    background-size: cover; /* Faz a imagem cobrir todo o header */
+    background-position: top 50%;
+    padding-left: 10%;
+    height: 100%; /* Altura do header */
+    color: black; /* Cor do texto */
+    display: flex; /* Usando Flexbox para centralizar o texto */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para o texto */
+}
+
 .feature {
     display: inline-flex;
     align-items: center;
@@ -12451,14 +12453,17 @@ h5 {
 }
 
     .containertop h1 {
-        margin-right: 20px;
+        margin-left: 20px;
     }
 
     .containertop ul {
         display: flex;
+        justify-content: flex-end;
         list-style: none;
         padding: 0;
+        padding-right: 3%;
         margin: 0;
+        gap: 2%;
     }
 
         .containertop ul li {
@@ -12470,5 +12475,51 @@ h5 {
                 color: #000;
             }
 
+
+ul.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo do ícone do menu hambúrguer */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 430px) {
+    /* Oculta o menu completo e mostra o ícone hambúrguer */
+    ul.menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Mostra o ícone hambúrguer */
+    .hamburger {
+        display: block;
+    }
+
+    /* Mostra o menu quando aberto */
+    ul.menu.open {
+        display: flex;
+    }
+
+    /* Estilos dos itens do menu */
+    ul.menu li {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+}
 
   
